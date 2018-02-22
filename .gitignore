@@ -20,3 +20,4 @@ junit.xml
 credentials.dat
 .nox
 .vscode
+venv
