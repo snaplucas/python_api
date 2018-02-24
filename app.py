@@ -1,11 +1,8 @@
 # -*- coding: utf-8 -*-
 
-from flask import Flask
-from flask import redirect, abort
 import json
-from flask import make_response
-from flask import jsonify
 
+from flask import Flask, abort, jsonify, make_response, redirect
 
 app = Flask('python_api')
 
