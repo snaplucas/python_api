@@ -7,8 +7,6 @@ from db import noticias
 
 app = Flask("python_api")
 
-# por enquanto vamos usar um template html hardcoded
-# mas calma! em breve falaremos  sobre os templates com Jinja2
 base_html = u"""
   <html>
   <head>
@@ -67,16 +65,13 @@ def index():
 
 @app.route("/noticia/<int:noticia_id>")
 def noticia(noticia_id):
-    noticia = noticias.find_one(id=noticia_id)  # query no banco de dados
+    noticia = noticias.find_one(id=noticia_id)
     noticia_html = u"""
         <h1>{titulo}</h1>
         <p>{texto}</p>
-    """.format(**noticia)  # remember, Python is full of magic!
-
+    """.format(**noticia)
     return base_html.format(title=noticia['titulo'], body=noticia_html)
 
 
 if __name__ == "__main__":
     app.run(debug=True, use_reloader=True)
-    # caso tenha problemas com multithreading na hora de inserir o registro no db use
-    # app.run(debug=False, use_reloader=False)
