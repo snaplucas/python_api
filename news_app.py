@@ -54,5 +54,3 @@ def media(filename):
 
 if __name__ == "__main__":
     app.run(debug=True, use_reloader=True)
-    # caso tenha problemas com multithreading na hora de inserir o registro no db use
-    # app.run(debug=False, use_reloader=False)

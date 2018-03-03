@@ -1,10 +1,9 @@
-{% extends "base.html" %}
-{% block content %}
+{% extends "base.html" %} {% block content %}
 <ul>
     {% for noticia in noticias %}
     <li>
         <a href="{{url_for('noticia', noticia_id=noticia.id)}}">
-         {{noticia.titulo}}
+            {{noticia.titulo}}
         </a>
     </li>
     {% endfor %}

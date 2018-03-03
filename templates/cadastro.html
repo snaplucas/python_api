@@ -1,17 +1,19 @@
-{% extends "base.html" %}
-{% block content %}
+{% extends "base.html" %} {% block content %}
 <form method="post" action="{{ url_for('cadastro') }}" enctype="multipart/form-data">
-   <label>Titulo:<br />
+    <label>Titulo:
+        <br />
         <input type="text" name="titulo" id="titulo" />
-   </label>
-   <br />
-   <label>Texto:<br />
+    </label>
+    <br />
+    <label>Texto:
+        <br />
         <textarea name="texto" id="texto"></textarea>
-   </label>
-   <br />
-   <label> Imagem:<br />
-      <input type="file" name="imagem" id="imagem" />
-   </label>
-   <input type="submit" value="Postar" />
+    </label>
+    <br />
+    <label> Imagem:
+        <br />
+        <input type="file" name="imagem" id="imagem" />
+    </label>
+    <input type="submit" value="Postar" />
 </form>
 {% endblock %}
