@@ -1,6 +1,14 @@
-# coding: utf-8
+from peewee import *
 
-import dataset
+mysql_db = MySQLDatabase('study', user='root', password='mypassword',
+                         host='172.17.0.2', port=3306)
 
-db = dataset.connect('sqlite:///noticias.db')
-noticias = db['noticias']
+class BaseModel(Model):
+    """A base model that will use our MySQL database"""
+    class Meta:
+        database = mysql_db
+
+class User(BaseModel):
+    username = CharField()
+
+mysql_db.connect()
