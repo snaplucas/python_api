@@ -1,7 +1,6 @@
 from peewee import *
 
-mysql_db = MySQLDatabase('study', user='root', password='mypassword',
-                         host='172.17.0.2', port=3306)
+mysql_db = SqliteDatabase('test.db')
 
 class BaseModel(Model):
     """A base model that will use our MySQL database"""
