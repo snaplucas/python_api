@@ -22,3 +22,4 @@ credentials.dat
 .vscode
 venv
 *.db
+.idea/

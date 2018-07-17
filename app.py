@@ -1,6 +1,4 @@
-import json
-
-from flask import Flask, abort, jsonify, make_response, redirect
+from flask import Flask, jsonify
 
 app = Flask('python_api')
 

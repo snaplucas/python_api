@@ -1,9 +1,11 @@
 # coding: utf-8
 import os
-from werkzeug import secure_filename
+
 from flask import (
     Blueprint, request, current_app, send_from_directory, render_template
 )
+from werkzeug import secure_filename
+
 from db import noticias
 
 noticias_blueprint = Blueprint('noticias', __name__)

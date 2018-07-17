@@ -1,4 +1,5 @@
 from flask import Flask
+
 from blueprints.noticias import noticias_blueprint
 
 app = Flask("wtf")
