@@ -41,8 +41,8 @@ def index():
 
 @noticias_blueprint.route("/noticia/<int:noticia_id>")
 def noticia(noticia_id):
-    noticia = noticias.find_one(id=noticia_id)
-    return render_template('noticia.html', noticia=noticia)
+    _noticia = noticias.find_one(id=noticia_id)
+    return render_template('noticia.html', noticia=_noticia)
 
 
 @noticias_blueprint.route('/media/<path:filename>')

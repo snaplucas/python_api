@@ -1,17 +1,25 @@
-from peewee import *
+# from peewee import *
+#
+# sql_lite = SqliteDatabase('test.db')
+#
+#
+# class BaseModel(Model):
+#     """A base model that will use our MySQL database"""
+#
+#     class Meta:
+#         database = sql_lite
+#
+#
+# class User(BaseModel):
+#     username = CharField()
+#
+#
+# sql_lite.connect()
 
-mysql_db = SqliteDatabase('test.db')
 
+# coding: utf-8
 
-class BaseModel(Model):
-    """A base model that will use our MySQL database"""
+import dataset
 
-    class Meta:
-        database = mysql_db
-
-
-class User(BaseModel):
-    username = CharField()
-
-
-mysql_db.connect()
+db = dataset.connect('sqlite:///noticias.db')
+noticias = db['noticias']
